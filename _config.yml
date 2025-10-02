@@ -1,16 +1,15 @@
-title: Portfolio
-description: Présentation de mon parcours, expériences et projets
-theme: minima
-
-# Liens de navigation
-nav:
-  - title: "Accueil"
-    url: /
-  - title: "Parcours scolaire"
-    url: /parcours
-  - title: "Expériences professionnelles"
-    url: /experiences
-  - title: "Projets"
-    url: /projets
-  - title: "Contact"
-    url: /contact
+# Configuration Jekyll
+lang: fr-FR
+title: "Portfolio – Arnaud Goetz"
+description: "Portfolio technique : projets, expériences et compétences (rendu, génération procédurale, simulation, IA)"
+# Thème demandé
+theme: minimal
+# Options générales
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+exclude:
+  - README_LOCAL.md
+# Navigation (liens directs)
+# Pour un thème plus avancé, migrer vers just-the-docs plus tard.
