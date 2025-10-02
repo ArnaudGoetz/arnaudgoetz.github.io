@@ -1,3 +1,16 @@
 title: Portfolio
-description: Mon parcours scolaire et professionnel
+description: Présentation de mon parcours, expériences et projets
 theme: minima
+
+# Liens de navigation
+nav:
+  - title: "Accueil"
+    url: /
+  - title: "Parcours scolaire"
+    url: /parcours
+  - title: "Expériences professionnelles"
+    url: /experiences
+  - title: "Projets"
+    url: /projets
+  - title: "Contact"
+    url: /contact
