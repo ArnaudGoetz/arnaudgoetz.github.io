@@ -1,0 +1,84 @@
+/* Custom styles for Portfolio */
+
+/* Image placeholders - shows a nice border when images are missing */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile image styling */
+img[alt="Photo de profil"] {
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+}
+
+/* Logo styling */
+img[alt*="Logo"] {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Document links styling */
+a[href$=".pdf"],
+a[href$=".zip"],
+a[href$=".doc"],
+a[href$=".docx"] {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+a[href$=".pdf"]:hover,
+a[href$=".zip"]:hover,
+a[href$=".doc"]:hover,
+a[href$=".docx"]:hover {
+    background-color: #e0e0e0;
+}
+
+/* Section spacing */
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 2px solid #e0e0e0;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+/* Code blocks for tech stack */
+code {
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+    }
+}
