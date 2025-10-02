@@ -3,5 +3,7 @@ layout: default
 title: Accueil
 ---
 
-# Bienvenue sur mon site
-Ceci est ma page d’accueil publiée avec GitHub Pages 🚀
+# Bienvenue 👋
+Je m'appelle Arnaud Goetz.  
+Voici mon Portfolio où je présente mon **parcours scolaire**, mes **expériences professionnelles** et mes **projets**.
+
