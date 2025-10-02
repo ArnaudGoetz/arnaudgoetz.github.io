@@ -1,16 +1,35 @@
-title: Portfolio
-description: Présentation de mon parcours, expériences et projets
+title: Portfolio d'Arnaud Goetz
+description: Portfolio professionnel - Développeur Full Stack | Parcours, expériences et projets
 theme: minima
 
+# Information personnelle
+author:
+  name: Arnaud Goetz
+  email: arnaud.goetz@example.com
+
 # Liens de navigation
-nav:
-  - title: "Accueil"
-    url: /
-  - title: "Parcours scolaire"
-    url: /parcours
-  - title: "Expériences professionnelles"
-    url: /experiences
-  - title: "Projets"
-    url: /projets
-  - title: "Contact"
-    url: /contact
+header_pages:
+  - index.md
+  - parcours.md
+  - experiences.md
+  - projets.md
+  - contact.md
+
+# SEO et réseaux sociaux
+lang: fr-FR
+timezone: Europe/Paris
+
+# GitHub configuration
+github_username: ArnaudGoetz
+linkedin_username: arnaudgoetz
+
+# Configuration Jekyll
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - assets/images/README.md
+  - assets/documents/README.md
