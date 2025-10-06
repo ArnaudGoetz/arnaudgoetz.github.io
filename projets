@@ -6,3 +6,135 @@ permalink: /projets/
 
 # 🚀 Projets
 
+Aperçu visuel et technique de mes travaux : génération, simulation, rendu, IA appliquée.
+
+## Génération Procédurale d'Arbres 3D
+
+![Hero arbre](../assets/img/projets/procedural/hero_tree.png)
+
+### Description
+Algorithme paramétrique générant des structures arborescentes (tronc, ramifications hiérarchiques, courbure contrôlée).
+
+### Paramètres clés
+| Paramètre | Effet |
+|-----------|------|
+| seed | Reproductibilité |
+| branch_factor | Densité de ramifications |
+| depth | Profondeur hiérarchique max |
+| curvature | Courbure moyenne segments |
+| taper | Amincissement progressif |
+
+### Pipeline
+1. Génération récursive (structure)
+2. Conversion → maillage
+3. Lissage & recalcul normales
+4. Export (OBJ / glTF) + LOD
+
+### Exemple (pseudo-code)
+```cpp
+Node* grow(Node* n, int depth) {
+  if (depth == 0) return n;
+  int count = random_range(1, branch_factor);
+  for (int i = 0; i < count; ++i) {
+    auto* child = new Node(curve_direction(n, i));
+    n->children.push_back(child);
+    grow(child, depth - 1);
+  }
+  return n;
+}
+```
+
+### Améliorations
+- [ ] Feuillage procédural (billboards / instancing)
+- [ ] LOD auto (distance / angle)
+- [ ] Générateur paramétré pour biomes
+
+---
+
+## Moteur Narratif Augmenté (Endless Novel) – Prototype
+
+> Génération adaptative de scènes textuelles avec contrôle de cohérence.
+
+![Hero narratif](../assets/img/projets/narratif/hero_narratif.png)
+
+### Objectifs
+- Génération / mutation de scènes selon état
+- Suivi personnages / attributs
+- Préparation intégration modèle IA future (module abstrait)
+
+### Stack
+C++ (core), Python (outils), JSON/YAML.
+
+### Architecture (extrait)
+```
+core/
+  engine/
+    story_state.hpp
+    narrative_rules.hpp
+  runtime/
+    branching.cpp
+    interpreter.cpp
+  data/
+    characters/
+    locations/
+```
+
+### Défis
+| Défi | Approche |
+|------|----------|
+| Cohérence | Table de symboles + snapshot mémoire |
+| Contrôle IA | Filtrage / gabarits textuels |
+| Extensibilité | Modules ponctuels (règles -> registre) |
+
+### Roadmap
+- [ ] Cache de "souvenirs" pondérés
+- [ ] Génération d'illustrations contextuelles
+- [ ] Export HTML interactif
+
+---
+
+## Reconstruction 3D Basée Image (Projet M1)
+
+![Hero Reconstruction](../assets/img/projets/medical/hero_reconstruction.png)
+
+### Contexte
+Projet exploratoire visant à reconstruire un modèle 3D à partir de vues pour assister la détection de position patient (chirurgie percutanée).
+
+### Axes techniques
+- Prétraitements (filtrage / normalisation)
+- Détection points clés & correspondances (hypothèse)
+- Triangulation & fusion nuage
+- Estimation erreurs reprojection
+
+### Améliorations
+- [ ] Calibration avancée multi-caméras
+- [ ] Comparaison algorithmes alternatifs
+- [ ] Export VR (glTF / PLY)
+
+---
+
+## Simulation Aimant Bitter (Thermique & Électrique)
+
+![Hero Bitter](../assets/img/projets/simulation/hero_bitter.png)
+
+### Objectif
+Étudier la répartition thermique + flux de courant dans une structure de type Bitter.
+
+### Outils
+| Étape | Outil |
+|-------|-------|
+| Maillage | Gmsh |
+| Résolution | Solveur expérimental / externe |
+| Visualisation | ParaView |
+| Post-traitement | Scripts Python |
+
+### Étapes
+1. Géométrie paramétrée
+2. Raffinement local
+3. Résolution itérative
+4. Export VTK → Visualisation
+
+### Pistes
+- Couplage thermo-mécanique
+- Script auto métriques (ΔT max)
+- Optimisation multi-résolution
