@@ -5,12 +5,12 @@
 
 ---
 
-## 🎯 Objectif
+## Objectif
 Concevoir des outils et expériences interactives mêlant rendu temps réel, simulation, génération procédurale et intelligence artificielle (narration adaptative / moteurs systémiques). Ouvert à des stages / alternances en développement moteur, R&D graphique, outils techniques ou pipeline 3D.
 
 ---
 
-## 🧬 Valeur ajoutée (Résumé)
+## Valeur ajoutée (Résumé)
 
 | Domaine | Mots-clés |
 |---------|-----------|
@@ -23,7 +23,7 @@ Concevoir des outils et expériences interactives mêlant rendu temps réel, sim
 
 ---
 
-## 🧪 Projets Techniques (Sélection)
+## Projets Techniques (Sélection)
 
 Chaque projet est documenté avec visuels / pseudo-code / axes d’amélioration.  
 Voir : [Dossier Projets](docs/projets/)
@@ -41,7 +41,7 @@ Voir : [Dossier Projets](docs/projets/)
 
 ---
 
-## 💼 Expériences Professionnelles
+## Expériences Professionnelles
 
 Dossier détaillé : [Expériences](docs/experiences/)
 
@@ -55,7 +55,7 @@ Dossier détaillé : [Expériences](docs/experiences/)
 
 ---
 
-## 🛠️ Compétences détaillées
+## Compétences détaillées
 
 ### Programmation
 - C / C++ (structures, récursivité, optimisation basique)
@@ -82,7 +82,7 @@ Dossier détaillé : [Expériences](docs/experiences/)
 
 ---
 
-## 🎓 Formation
+## Formation
 
 | Période | Intitulé | Notes |
 |---------|----------|-------|
@@ -95,7 +95,7 @@ Certifications :
 
 ---
 
-## 🌐 Langues
+## Langues
 
 | Langue | Niveau | Détails |
 |--------|-------|---------|
@@ -105,7 +105,7 @@ Certifications :
 
 ---
 
-## 📁 Ressources
+## Ressources
 
 | Type | Lien / Emplacement |
 |------|--------------------|
@@ -116,7 +116,7 @@ Certifications :
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 - [ ] Remplacer placeholders visuels par assets optimisés
 - [ ] Déployer GitHub Pages (thème minimal déjà configuré)
 - [ ] (Option) Script génération galerie + compression automatique
@@ -125,7 +125,7 @@ Certifications :
 
 ---
 
-## 📞 Contact
+## Contact
 
 | Canal | Détail |
 |-------|--------|
@@ -136,7 +136,7 @@ Certifications :
 
 ---
 
-## 🔒 Mentions
+## Mentions
 Certains projets (ou données) nécessitent anonymisation (médical / client). Les visuels finaux ne doivent pas révéler de données sensibles.
 
 ---

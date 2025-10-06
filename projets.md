@@ -5,278 +5,243 @@ description: Réalisations techniques en génération procédurale, simulation, 
 permalink: /projets/
 ---
 
-<div class="project-section">
-  <h3>🌳 Génération Procédurale d'Arbres 3D</h3>
-  <p><strong>Technologies :</strong> C++, OpenGL, algorithmes récursifs<br>
-  <strong>Contexte :</strong> Projet de rendu 3D avancé</p>
-
-  <!-- Placeholder pour image -->
-  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
-    <span style="color: #666;">🖼️ Image : Arbre 3D généré procéduralement</span>
-  </div>
-
-  <h4>🎯 Description</h4>
-  <p>Algorithme paramétrique générant des structures arborescentes complètes avec tronc, ramifications hiérarchiques et courbure contrôlée. Le système permet de créer une grande variété d'arbres réalistes à partir de quelques paramètres simples.</p>
-
-  <h4>⚙️ Paramètres de contrôle</h4>
-  <table>
-    <tr>
-      <th>Paramètre</th>
-      <th>Effet</th>
-      <th>Plage typique</th>
-    </tr>
-    <tr>
-      <td><code>seed</code></td>
-      <td>Reproductibilité des résultats</td>
-      <td>0 - 999999</td>
-    </tr>
-    <tr>
-      <td><code>branch_factor</code></td>
-      <td>Densité de ramifications par nœud</td>
-      <td>2 - 6</td>
-    </tr>
-    <tr>
-      <td><code>depth</code></td>
-      <td>Profondeur hiérarchique maximale</td>
-      <td>4 - 8</td>
-    </tr>
-    <tr>
-      <td><code>curvature</code></td>
-      <td>Courbure moyenne des segments</td>
-      <td>0.1 - 0.8</td>
-    </tr>
-    <tr>
-      <td><code>taper</code></td>
-      <td>Amincissement progressif des branches</td>
-      <td>0.6 - 0.9</td>
-    </tr>
-  </table>
-
-  <h4>🔄 Pipeline de génération</h4>
-  <ol>
-    <li><strong>Génération récursive :</strong> Construction de la structure arborescente</li>
-    <li><strong>Conversion en maillage :</strong> Transformation en géométrie 3D</li>
-    <li><strong>Lissage :</strong> Recalcul des normales pour un rendu réaliste</li>
-    <li><strong>Export multi-format :</strong> OBJ, glTF avec niveaux de détail (LOD)</li>
-  </ol>
-
-  <h4>💻 Exemple d'algorithme</h4>
-  <pre><code class="language-cpp">
-Node* grow(Node* parent, int remaining_depth) {
-    if (remaining_depth == 0) return parent;
-    
-    int branch_count = random_range(1, branch_factor);
-    for (int i = 0; i &lt; branch_count; ++i) {
-        auto* child = new Node(
-            calculate_branch_direction(parent, i),
-            parent-&gt;radius * taper,
-            parent-&gt;length * length_ratio
-        );
-        parent-&gt;children.push_back(child);
-        grow(child, remaining_depth - 1);
-    }
-    return parent;
-}
-  </code></pre>
-
-  <h4>🚀 Améliorations futures</h4>
-  <ul>
-    <li>Génération de feuillage procédural avec billboards et instancing</li>
-    <li>Système de LOD automatique basé sur la distance et l'angle de vue</li>
-    <li>Générateur paramétré pour différents biomes (tropical, tempéré, boréal)</li>
-    <li>Export vers moteurs de jeu (Unity, Unreal Engine)</li>
-  </ul>
-</div>
-
-<div class="project-section">
-  <h3>📖 Moteur Narratif Augmenté (Endless Novel)</h3>
-  <p><strong>Technologies :</strong> C++, Python, JSON/YAML, APIs IA<br>
-  <strong>Contexte :</strong> Stage BLACKCODE - Prototype de recherche</p>
-
-  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
-    <span style="color: #666;">🖼️ Diagramme : Architecture du moteur narratif</span>
-  </div>
-
-  <h4>🎯 Vision</h4>
-  <p>Génération adaptative de scènes textuelles avec contrôle rigoureux de cohérence narrative. Le système maintient un état persistant et s'adapte aux choix du lecteur tout en préservant la logique du récit.</p>
-
-  <h4>🏗️ Architecture technique</h4>
-  <pre><code>
-endless_novel/
-├── core/
-│   ├── engine/
-│   │   ├── story_state.hpp      # État global du récit
-│   │   ├── narrative_rules.hpp  # Règles de cohérence
-│   │   └── character_manager.hpp
-│   ├── runtime/
-│   │   ├── branching.cpp        # Gestion des embranchements
-│   │   ├── interpreter.cpp      # Exécution des scènes
-│   │   └── ai_interface.cpp     # Interface avec IA
-│   └── data/
-│       ├── characters/          # Définitions personnages
-│       ├── locations/           # Environnements
-│       └── templates/           # Modèles de scènes
-  </code></pre>
-
-  <h4>🧩 Défis techniques résolus</h4>
-  <table>
-    <tr>
-      <th>Défi</th>
-      <th>Solution implémentée</th>
-    </tr>
-    <tr>
-      <td><strong>Cohérence narrative</strong></td>
-      <td>Table de symboles + système de snapshots mémoire</td>
-    </tr>
-    <tr>
-      <td><strong>Contrôle de l'IA</strong></td>
-      <td>Filtrage contextuel et gabarits textuels</td>
-    </tr>
-    <tr>
-      <td><strong>Extensibilité</strong></td>
-      <td>Architecture modulaire avec registre de règles</td>
-    </tr>
-    <tr>
-      <td><strong>Performance</strong></td>
-      <td>Cache intelligent et génération asynchrone</td>
-    </tr>
-  </table>
-
-  <h4>🎨 Fonctionnalités principales</h4>
-  <ul>
-    <li><strong>Génération contextuelle :</strong> Scènes adaptées à l'état du récit</li>
-    <li><strong>Mémoire persistante :</strong> Suivi des personnages, lieux et événements</li>
-    <li><strong>Validation automatique :</strong> Vérification de cohérence pré-diffusion</li>
-    <li><strong>Interface modulaire :</strong> Préparation pour intégration UI future</li>
-  </ul>
-
-  <h4>📋 Roadmap de développement</h4>
-  <ul>
-    <li>Implémentation d'un cache de "souvenirs" pondérés</li>
-    <li>Génération d'illustrations contextuelles automatiques</li>
-    <li>Export vers format HTML interactif</li>
-    <li>Interface graphique utilisateur intuitive</li>
-  </ul>
-</div>
-
-<div class="project-section">
-  <h3>📐 Reconstruction 3D Basée Images</h3>
-  <p><strong>Technologies :</strong> Python, OpenCV, algorithmes de vision par ordinateur<br>
-  <strong>Contexte :</strong> Projet M1 - Application médicale</p>
-
-  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
-    <span style="color: #666;">🖼️ Pipeline : De l'image 2D au modèle 3D</span>
-  </div>
-
-  <h4>🎯 Objectif médical</h4>
-  <p>Projet exploratoire visant à reconstruire un modèle 3D anatomique à partir de vues multiples pour assister la détection de position patient en chirurgie percutanée.</p>
-
-  <h4>🔬 Méthodologie technique</h4>
-  <ol>
-    <li><strong>Prétraitement :</strong> Filtrage et normalisation des images d'entrée</li>
-    <li><strong>Détection de caractéristiques :</strong> Points clés et correspondances inter-images</li>
-    <li><strong>Triangulation :</strong> Reconstruction 3D par intersection de rayons</li>
-    <li><strong>Fusion :</strong> Assemblage du nuage de points en maillage cohérent</li>
-    <li><strong>Validation :</strong> Estimation des erreurs de reprojection</li>
-  </ol>
-
-  <h4>⚡ Défis rencontrés</h4>
-  <ul>
-    <li><strong>Calibration caméra :</strong> Précision des paramètres intrinsèques et extrinsèques</li>
-    <li><strong>Correspondances robustes :</strong> Gestion des occultations et variations d'éclairage</li>
-    <li><strong>Optimisation :</strong> Équilibre entre précision et temps de calcul</li>
-    <li><strong>Validation médicale :</strong> Respect des contraintes de précision clinique</li>
-  </ul>
-
-  <h4>🔬 Résultats obtenus</h4>
-  <ul>
-    <li>Pipeline fonctionnel de reconstruction multi-vues</li>
-    <li>Précision suffisante pour applications d'aide au positionnement</li>
-    <li>Documentation complète du processus et des limitations</li>
-  </ul>
-
-  <h4>🚀 Perspectives d'amélioration</h4>
-  <ul>
-    <li>Calibration avancée multi-caméras temps réel</li>
-    <li>Comparaison d'algorithmes alternatifs (SLAM, photogrammétrie)</li>
-    <li>Export vers environnements VR/AR (glTF, PLY)</li>
-    <li>Intégration avec systèmes de navigation chirurgicale</li>
-  </ul>
-</div>
-
-<div class="project-section">
-  <h3>🧲 Simulation Aimant Bitter - Couplage Thermo-Électrique</h3>
-  <p><strong>Technologies :</strong> Gmsh, ParaView, Python, solveurs numériques<br>
-  <strong>Contexte :</strong> Projet de simulation numérique avancée</p>
-
-  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
-    <span style="color: #666;">🖼️ Visualisation : Champs thermique et électrique</span>
-  </div>
-
-  <h4>🎯 Problématique scientifique</h4>
-  <p>Étude de la répartition thermique et des flux de courant dans une structure d'aimant supraconducteur de type Bitter, caractérisée par des géométries complexes et des couplages physiques multiples.</p>
-
-  <h4>🛠️ Chaîne d'outils complète</h4>
-  <table>
-    <tr>
-      <th>Étape</th>
-      <th>Outil</th>
-      <th>Fonction</th>
-    </tr>
-    <tr>
-      <td><strong>Géométrie</strong></td>
-      <td>Gmsh</td>
-      <td>Modélisation CAD et maillage adaptatif</td>
-    </tr>
-    <tr>
-      <td><strong>Calcul</strong></td>
-      <td>Solveur FEM custom</td>
-      <td>Résolution couplée thermo-électrique</td>
-    </tr>
-    <tr>
-      <td><strong>Visualisation</strong></td>
-      <td>ParaView</td>
-      <td>Rendu scientifique des champs</td>
-    </tr>
-    <tr>
-      <td><strong>Post-traitement</strong></td>
-      <td>Python/NumPy</td>
-      <td>Analyse statistique et métriques</td>
-    </tr>
-  </table>
-
-  <h4>🔄 Workflow de simulation</h4>
-  <ol>
-    <li><strong>Géométrie paramétrée :</strong> Modèle CAD flexible avec paramètres d'entrée</li>
-    <li><strong>Maillage adaptatif :</strong> Raffinement local dans les zones critiques</li>
-    <li><strong>Résolution itérative :</strong> Couplage des équations de diffusion thermique et électrique</li>
-    <li><strong>Convergence :</strong> Critères de stabilité et validation numérique</li>
-    <li><strong>Export multi-format :</strong> VTK, HDF5 pour visualisation et archivage</li>
-  </ol>
-
-  <h4>📊 Résultats et métriques</h4>
-  <ul>
-    <li><strong>Cartes thermiques :</strong> Distribution spatiale des températures</li>
-    <li><strong>Flux électriques :</strong> Densité de courant et résistivité locale</li>
-    <li><strong>Points critiques :</strong> Identification des zones de concentration thermique</li>
-    <li><strong>Validation :</strong> Comparaison avec données expérimentales disponibles</li>
-  </ul>
-
-  <h4>🔬 Pistes de recherche avancées</h4>
-  <ul>
-    <li>Couplage thermo-mécanique pour déformation structurelle</li>
-    <li>Automatisation de métriques (ΔT max, gradients critiques)</li>
-    <li>Optimisation multi-résolution pour calculs haute performance</li>
-    <li>Intégration dans pipeline de conception d'aimants</li>
-  </ul>
-</div>
-
-<div style="background: #e8f4f8; border-left: 4px solid #0366d6; padding: 1.5rem; margin-top: 2rem;">
-  <h3 style="margin-top: 0; color: #0366d6;">💡 Philosophy des projets</h3>
-  <p style="margin-bottom: 0;">
-    Chaque projet reflète une approche méthodique combinant <strong>rigueur technique</strong>, 
-    <strong>innovation créative</strong> et <strong>applications concrètes</strong>. 
-    L'objectif est toujours de créer des outils robustes, documentés et réutilisables, 
-    pouvant servir de base à des développements futurs plus ambitieux.
+<div class="intro-note" style="background-color: #f6f8fa; border-left: 4px solid #0366d6; padding: 15px 20px; margin-bottom: 40px; border-radius: 4px;">
+  <p style="margin: 0; line-height: 1.6;">
+    <strong>Note :</strong> Les projets présentés ci-dessous constituent une sélection représentative de mon parcours 
+    de <strong>Master</strong>, mais ne reflètent pas l'intégralité de mes réalisations. 
+    Ils ont été choisis pour illustrer la <strong>diversité des compétences</strong> acquises et la 
+    <strong>pluralité de ma formation</strong>.
   </p>
 </div>
+
+<div class="project-section">
+  <h3>Génération d'Arbre Procédurale en 3D - Bucket Sort - Exploration d'Espace</h3>
+  
+  <h4>Contexte et Objectifs</h4>
+  <p>
+    Les modèles 3D d'arbres sont particulièrement lourds dans les jeux vidéo et les simulations. 
+    Ce projet propose une solution pour concilier réalisme visuel et performance, en générant des arbres 
+    personnalisables et reproductibles en temps réel.
+  </p>
+  
+  <h4>Contraintes Techniques</h4>
+  <ul>
+    <li><strong>Performance temps réel</strong> : Méthodes d'exécution rapides adaptées aux applications interactives</li>
+    <li><strong>Génération procédurale</strong> : Chaque arbre est unique selon les paramètres fournis</li>
+    <li><strong>Topologie correcte</strong> : Maillages manifold garantissant une géométrie valide</li>
+  </ul>
+  
+  <h4>Pipeline de Génération</h4>
+  <ol>
+    <li><strong>Génération de nuage de points</strong> : Utilisation de la super-formule pour créer l'enveloppe de la couronne</li>
+    <li><strong>Structure accélératrice</strong> : Implémentation d'un tri par paquet (Bucket Sort) pour optimiser les calculs</li>
+    <li><strong>Algorithme de colonisation d'espace</strong> : Croissance organique des branches vers les points attracteurs</li>
+    <li><strong>Conversion en maillage manifold</strong> : Transformation du squelette en géométrie 3D valide</li>
+    <li><strong>Rendu optimisé</strong> : Affichage performant du résultat final</li>
+  </ol>
+  
+  <h4>Méthode : Space Colonization Algorithm</h4>
+  <p>
+    L'algorithme repose sur une approche de colonisation d'espace inspirée par la croissance naturelle des arbres. 
+    Les branches se développent en direction de points attracteurs distribués dans la couronne, créant une structure 
+    organique et réaliste.
+  </p>
+  <p>
+    <em>Basé sur les travaux de Ratul et al. (2019) : "Applicability of space colonization algorithm for real time tree generation", 
+    International Conference on Computer and Information Technology (ICCIT).</em>
+  </p>
+  
+  <h4>Rapport Technique Complet</h4>
+  <div class="pdf-viewer-container" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
+    <iframe 
+      src="/assets/rapports/arbre_procedural.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none;"
+      title="Rapport - Génération d'Arbre Procédurale">
+    </iframe>
+    <p style="text-align: center; padding: 10px; background-color: #f5f5f5; margin: 0;">
+      <a href="/assets/rapports/arbre_procedural.pdf" download style="text-decoration: none; color: #0366d6; font-weight: bold;">
+        📄 Télécharger le rapport PDF
+      </a>
+    </p>
+  </div>
+  
+  <h4>Technologies</h4>
+  <p>
+    <span class="tech-tag">C++</span>
+    <span class="tech-tag">OpenGL</span>
+    <span class="tech-tag">Génération Procédurale</span>
+    <span class="tech-tag">Géométrie Algorithmique</span>
+    <span class="tech-tag">Optimisation Spatiale</span>
+  </p>
+</div>
+
+<div class="project-section">
+  <h3>Reconstruction 3D Basée Image pour la Détection de Position du Patient en Chirurgie Percutanée</h3>
+  <p><em>Projet de recherche M1 supervisé</em></p>
+  
+  <h4>Contexte Médical</h4>
+  <p>
+    La cryoablation percutanée utilise une aiguille pour geler les tumeurs de manière minimalement invasive. 
+    En chirurgie assistée par ordinateur, le guidage précis de l'aiguille le long d'un trajet planifié est essentiel 
+    pour garantir l'efficacité du traitement. Cela nécessite une localisation précise du patient et une recalibration 
+    du modèle 3D en temps réel.
+  </p>
+  
+  <h4>Innovation et Objectifs</h4>
+  <p>
+    Ce projet vise à optimiser le processus de détection et recalibration en réduisant les coûts d'équipement et 
+    l'encombrement spatial. L'approche proposée utilise un smartphone ou une webcam pour la détection et la 
+    recalibration, en remplacement des systèmes de tracking coûteux traditionnels.
+  </p>
+  <p>
+    <strong>Objectif principal :</strong> Reconstruire la forme 3D de la peau du patient à partir d'images 2D 
+    (photos ou vidéos) pour permettre la recalibration du modèle numérique avec la surface réelle.
+  </p>
+  
+  <h4>Méthodologie de Recherche</h4>
+  <p><strong>Phase 1 : État de l'art</strong></p>
+  <ul>
+    <li>Revue complète de la littérature sur les méthodes de reconstruction 3D basée image</li>
+    <li>Analyse des technologies existantes dans le domaine</li>
+    <li>Synthèse comparative des différentes approches</li>
+  </ul>
+  
+  <p><strong>Phase 2 : Implémentation technique</strong></p>
+  <ul>
+    <li><strong>DepthAnything</strong> : Transformation des images 2D en cartes de profondeur (depth maps)</li>
+    <li><strong>Open3D</strong> : Génération de nuages de points à partir des cartes de profondeur</li>
+    <li><strong>Pipeline complet</strong> : Photo/Vidéo → Depth Map → Point Cloud → Reconstruction de surface</li>
+  </ul>
+  
+  <h4>Rapport de Recherche Complet</h4>
+  <div class="pdf-viewer-container" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
+    <iframe 
+      src="/assets/rapports/TER_2025_compressed.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none;"
+      title="Rapport - Reconstruction 3D pour Chirurgie Percutanée">
+    </iframe>
+    <p style="text-align: center; padding: 10px; background-color: #f5f5f5; margin: 0;">
+      <a href="/assets/rapports/TER_2025_compressed.pdf" download style="text-decoration: none; color: #0366d6; font-weight: bold;">
+        📄 Télécharger le rapport de recherche PDF
+      </a>
+    </p>
+  </div>
+  
+  <h4>Technologies</h4>
+  <p>
+    <span class="tech-tag">Python</span>
+    <span class="tech-tag">DepthAnything</span>
+    <span class="tech-tag">Open3D</span>
+    <span class="tech-tag">Computer Vision</span>
+    <span class="tech-tag">Deep Learning</span>
+    <span class="tech-tag">Point Cloud Processing</span>
+    <span class="tech-tag">Chirurgie Assistée</span>
+  </p>
+</div>
+
+<div class="project-section">
+  <h3>Simulation Thermique et Électrique d'un Aimant Bitter</h3>
+  <p><em>Projet M1 : Calcul Scientifique Haute Performance</em></p>
+  
+  <h4>Contexte et Objectifs</h4>
+  <p>
+    Simulation du couplage thermo-électrique d'un aimant Bitter utilisé pour générer des champs magnétiques intenses 
+    en laboratoire. Le projet implémente une chaîne complète de calcul scientifique : du maillage 3D à la visualisation 
+    avancée des résultats, en passant par le calcul parallèle haute performance.
+  </p>
+  
+  <h4>Pipeline Scientifique</h4>
+  <ol>
+    <li><strong>Pré-traitement (Gmsh)</strong> : Modélisation géométrique et génération de maillage 3D adaptatif</li>
+    <li><strong>Calcul HPC (Feel++)</strong> : Simulation parallèle sur cluster Gaya avec résolution des équations couplées (potentiel électrique + thermique)</li>
+    <li><strong>Post-traitement (ParaView)</strong> : Visualisation avancée avec filtres d'extraction, champs vectoriels et iso-surfaces thermiques</li>
+  </ol>
+  
+  <h4>Résultats</h4>
+  <p>
+    Distribution thermique de <strong>298K à 374K</strong> permettant l'identification des zones critiques nécessitant 
+    un refroidissement optimisé. Analyse des patterns de circulation du courant électrique dans la structure.
+  </p>
+  
+  <h4>Rapport de Projet Complet</h4>
+  <div class="pdf-viewer-container" style="margin: 20px 0; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
+    <iframe 
+      src="/assets/rapports/prePost.pdf" 
+      width="100%" 
+      height="600px" 
+      style="border: none;"
+      title="Rapport - Simulation Aimant Bitter">
+    </iframe>
+    <p style="text-align: center; padding: 10px; background-color: #f5f5f5; margin: 0;">
+      <a href="/assets/rapports/prePost.pdf" download style="text-decoration: none; color: #0366d6; font-weight: bold;">
+        📄 Télécharger le rapport de projet PDF
+      </a>
+    </p>
+  </div>
+  
+  <h4>Technologies</h4>
+  <p>
+    <span class="tech-tag">Gmsh</span>
+    <span class="tech-tag">Feel++</span>
+    <span class="tech-tag">ParaView</span>
+    <span class="tech-tag">MPI</span>
+    <span class="tech-tag">HPC</span>
+    <span class="tech-tag">SLURM</span>
+    <span class="tech-tag">Calcul Scientifique</span>
+  </p>
+</div>
+
+<style>
+.project-section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e1e4e8;
+}
+
+.project-section:last-child {
+  border-bottom: none;
+}
+
+.project-section h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.project-section h4 {
+  color: #34495e;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.project-section ul, .project-section ol {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+.project-section li {
+  margin-bottom: 10px;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #e1f5fe;
+  color: #01579b;
+  padding: 5px 12px;
+  margin: 5px 5px 5px 0;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.pdf-viewer-container {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+</style>
+
+
