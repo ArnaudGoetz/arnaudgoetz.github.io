@@ -3,7 +3,7 @@ lang: fr-FR
 title: "Portfolio – Arnaud Goetz"
 description: "Portfolio technique : projets, expériences et compétences (rendu, génération procédurale, simulation, IA)"
 # Thème demandé
-theme: minimal
+theme: jekyll-theme-minimal
 # Options générales
 markdown: kramdown
 kramdown:
@@ -11,5 +11,14 @@ kramdown:
 permalink: pretty
 exclude:
   - README_LOCAL.md
-# Navigation (liens directs)
-# Pour un thème plus avancé, migrer vers just-the-docs plus tard.
+
+# Navigation
+nav:
+  - title: "Accueil"
+    url: /
+  - title: "Parcours scolaire"
+    url: /parcours
+  - title: "Expériences professionnelles"
+    url: /experiences
+  - title: "Projets"
+    url: /projets

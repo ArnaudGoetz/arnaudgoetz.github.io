@@ -1,12 +1,134 @@
----
-layout: default
-title: Accueil
----
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil | Portfolio – Arnaud Goetz</title>
+    <meta name="description" content="Portfolio technique : projets, expériences et compétences (rendu, génération procédurale, simulation, IA)">
+    
+    <link rel="stylesheet" href="/assets/css/style.css?v=f8a5ba1ff6c0dac5717c7fa0295ccc0a6a2aabda">
+    <style>
+      /* Navigation personnalisée */
+      .navigation {
+        background-color: #f6f8fa;
+        border-bottom: 1px solid #e1e4e8;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+      }
+      
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      @media (min-width: 1400px) {
+        .nav-container {
+          max-width: 1300px;
+          padding: 0 3rem;
+        }
+      }
+      
+      .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      
+      .nav-item {
+        margin: 0;
+      }
+      
+      .nav-link {
+        color: #586069;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+      }
+      
+      .nav-link:hover {
+        color: #0366d6;
+        text-decoration: underline;
+      }
+      
+      .nav-link.active {
+        color: #0366d6;
+        font-weight: 600;
+      }
+      
+      /* Contenu principal */
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
+      }
+      
+      @media (min-width: 1400px) {
+        .main-content {
+          max-width: 1300px;
+          padding: 0 3rem 2rem;
+        }
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-list {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <ul class="nav-list">
+          
+          <li class="nav-item">
+            <a href="/" 
+               class="nav-link active">
+              Accueil
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/parcours" 
+               class="nav-link">
+              Parcours scolaire
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/experiences" 
+               class="nav-link">
+              Expériences professionnelles
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/projets" 
+               class="nav-link">
+              Projets
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
 
-<div style="text-align: center; margin-bottom: 3rem;">
+    <!-- Contenu principal -->
+    <div class="main-content">
+      <div style="text-align: center; margin-bottom: 3rem;">
   <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #24292e;">👋 Bienvenue</h1>
   <p style="font-size: 1.3rem; color: #586069; max-width: 600px; margin: 0 auto;">
-    Je m'appelle <strong>Arnaud Goetz</strong>.<br>
+    Je m'appelle <strong>Arnaud Goetz</strong>.<br />
     Voici mon Portfolio où je présente mon <strong>parcours scolaire</strong>, 
     mes <strong>expériences professionnelles</strong> et mes <strong>projets</strong>.
   </p>
@@ -29,7 +151,7 @@ title: Accueil
     <h2 style="margin-top: 0; color: #0366d6; font-size: 1.75rem; font-weight: 700;">💼 Expériences</h2>
     <p style="color: #586069; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem;">
       Stages professionnels et collaborations techniques : développement de moteurs narratifs IA, 
-      R&D en génération d'images, modélisation patrimoniale.
+      R&amp;D en génération d'images, modélisation patrimoniale.
     </p>
     <a href="/experiences" style="display: inline-block; background: linear-gradient(135deg, #0366d6, #0256c7); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.05rem; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(3,102,214,0.2);" onmouseover="this.style.background='linear-gradient(135deg, #0256c7, #024bb3)'; this.style.transform='translateY(-1px)'" onmouseout="this.style.background='linear-gradient(135deg, #0366d6, #0256c7)'; this.style.transform='translateY(0)'">
       Explorer les expériences
@@ -131,3 +253,9 @@ title: Accueil
   </script>
 </div>
 
+
+    </div>
+
+    
+  </body>
+</html>

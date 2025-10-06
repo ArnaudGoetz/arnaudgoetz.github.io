@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projets | Portfolio – Arnaud Goetz</title>
+    <meta name="description" content="Réalisations techniques en génération procédurale, simulation, rendu 3D et IA appliquée">
+    
+    <link rel="stylesheet" href="/assets/css/style.css?v=f8a5ba1ff6c0dac5717c7fa0295ccc0a6a2aabda">
+    <style>
+      /* Navigation personnalisée */
+      .navigation {
+        background-color: #f6f8fa;
+        border-bottom: 1px solid #e1e4e8;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+      }
+      
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      
+      @media (min-width: 1400px) {
+        .nav-container {
+          max-width: 1300px;
+          padding: 0 3rem;
+        }
+      }
+      
+      .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      
+      .nav-item {
+        margin: 0;
+      }
+      
+      .nav-link {
+        color: #586069;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+      }
+      
+      .nav-link:hover {
+        color: #0366d6;
+        text-decoration: underline;
+      }
+      
+      .nav-link.active {
+        color: #0366d6;
+        font-weight: 600;
+      }
+      
+      /* Contenu principal */
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
+      }
+      
+      @media (min-width: 1400px) {
+        .main-content {
+          max-width: 1300px;
+          padding: 0 3rem 2rem;
+        }
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-list {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <ul class="nav-list">
+          
+          <li class="nav-item">
+            <a href="/" 
+               class="nav-link">
+              Accueil
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/parcours" 
+               class="nav-link">
+              Parcours scolaire
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/experiences" 
+               class="nav-link">
+              Expériences professionnelles
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="/projets" 
+               class="nav-link">
+              Projets
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+      <div class="page-container">
+  <header class="page-header">
+    <h1 class="page-title">Projets</h1>
+    
+      <p class="page-description">Réalisations techniques en génération procédurale, simulation, rendu 3D et IA appliquée</p>
+    
+  </header>
+
+  <main class="page-content">
+    <div class="project-section">
+  <h3>🌳 Génération Procédurale d'Arbres 3D</h3>
+  <p><strong>Technologies :</strong> C++, OpenGL, algorithmes récursifs<br />
+  <strong>Contexte :</strong> Projet de rendu 3D avancé</p>
+
+  <!-- Placeholder pour image -->
+  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
+    <span style="color: #666;">🖼️ Image : Arbre 3D généré procéduralement</span>
+  </div>
+
+  <h4>🎯 Description</h4>
+  <p>Algorithme paramétrique générant des structures arborescentes complètes avec tronc, ramifications hiérarchiques et courbure contrôlée. Le système permet de créer une grande variété d'arbres réalistes à partir de quelques paramètres simples.</p>
+
+  <h4>⚙️ Paramètres de contrôle</h4>
+  <table>
+    <tr>
+      <th>Paramètre</th>
+      <th>Effet</th>
+      <th>Plage typique</th>
+    </tr>
+    <tr>
+      <td><code>seed</code></td>
+      <td>Reproductibilité des résultats</td>
+      <td>0 - 999999</td>
+    </tr>
+    <tr>
+      <td><code>branch_factor</code></td>
+      <td>Densité de ramifications par nœud</td>
+      <td>2 - 6</td>
+    </tr>
+    <tr>
+      <td><code>depth</code></td>
+      <td>Profondeur hiérarchique maximale</td>
+      <td>4 - 8</td>
+    </tr>
+    <tr>
+      <td><code>curvature</code></td>
+      <td>Courbure moyenne des segments</td>
+      <td>0.1 - 0.8</td>
+    </tr>
+    <tr>
+      <td><code>taper</code></td>
+      <td>Amincissement progressif des branches</td>
+      <td>0.6 - 0.9</td>
+    </tr>
+  </table>
+
+  <h4>🔄 Pipeline de génération</h4>
+  <ol>
+    <li><strong>Génération récursive :</strong> Construction de la structure arborescente</li>
+    <li><strong>Conversion en maillage :</strong> Transformation en géométrie 3D</li>
+    <li><strong>Lissage :</strong> Recalcul des normales pour un rendu réaliste</li>
+    <li><strong>Export multi-format :</strong> OBJ, glTF avec niveaux de détail (LOD)</li>
+  </ol>
+
+  <h4>💻 Exemple d'algorithme</h4>
+  <pre><code class="language-cpp">
+Node* grow(Node* parent, int remaining_depth) {
+    if (remaining_depth == 0) return parent;
+    
+    int branch_count = random_range(1, branch_factor);
+    for (int i = 0; i &lt; branch_count; ++i) {
+        auto* child = new Node(
+            calculate_branch_direction(parent, i),
+            parent-&gt;radius * taper,
+            parent-&gt;length * length_ratio
+        );
+        parent-&gt;children.push_back(child);
+        grow(child, remaining_depth - 1);
+    }
+    return parent;
+}
+  </code></pre>
+
+  <h4>🚀 Améliorations futures</h4>
+  <ul>
+    <li>Génération de feuillage procédural avec billboards et instancing</li>
+    <li>Système de LOD automatique basé sur la distance et l'angle de vue</li>
+    <li>Générateur paramétré pour différents biomes (tropical, tempéré, boréal)</li>
+    <li>Export vers moteurs de jeu (Unity, Unreal Engine)</li>
+  </ul>
+</div>
+
+<div class="project-section">
+  <h3>📖 Moteur Narratif Augmenté (Endless Novel)</h3>
+  <p><strong>Technologies :</strong> C++, Python, JSON/YAML, APIs IA<br />
+  <strong>Contexte :</strong> Stage BLACKCODE - Prototype de recherche</p>
+
+  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
+    <span style="color: #666;">🖼️ Diagramme : Architecture du moteur narratif</span>
+  </div>
+
+  <h4>🎯 Vision</h4>
+  <p>Génération adaptative de scènes textuelles avec contrôle rigoureux de cohérence narrative. Le système maintient un état persistant et s'adapte aux choix du lecteur tout en préservant la logique du récit.</p>
+
+  <h4>🏗️ Architecture technique</h4>
+  <pre><code>
+endless_novel/
+├── core/
+│   ├── engine/
+│   │   ├── story_state.hpp      # État global du récit
+│   │   ├── narrative_rules.hpp  # Règles de cohérence
+│   │   └── character_manager.hpp
+│   ├── runtime/
+│   │   ├── branching.cpp        # Gestion des embranchements
+│   │   ├── interpreter.cpp      # Exécution des scènes
+│   │   └── ai_interface.cpp     # Interface avec IA
+│   └── data/
+│       ├── characters/          # Définitions personnages
+│       ├── locations/           # Environnements
+│       └── templates/           # Modèles de scènes
+  </code></pre>
+
+  <h4>🧩 Défis techniques résolus</h4>
+  <table>
+    <tr>
+      <th>Défi</th>
+      <th>Solution implémentée</th>
+    </tr>
+    <tr>
+      <td><strong>Cohérence narrative</strong></td>
+      <td>Table de symboles + système de snapshots mémoire</td>
+    </tr>
+    <tr>
+      <td><strong>Contrôle de l'IA</strong></td>
+      <td>Filtrage contextuel et gabarits textuels</td>
+    </tr>
+    <tr>
+      <td><strong>Extensibilité</strong></td>
+      <td>Architecture modulaire avec registre de règles</td>
+    </tr>
+    <tr>
+      <td><strong>Performance</strong></td>
+      <td>Cache intelligent et génération asynchrone</td>
+    </tr>
+  </table>
+
+  <h4>🎨 Fonctionnalités principales</h4>
+  <ul>
+    <li><strong>Génération contextuelle :</strong> Scènes adaptées à l'état du récit</li>
+    <li><strong>Mémoire persistante :</strong> Suivi des personnages, lieux et événements</li>
+    <li><strong>Validation automatique :</strong> Vérification de cohérence pré-diffusion</li>
+    <li><strong>Interface modulaire :</strong> Préparation pour intégration UI future</li>
+  </ul>
+
+  <h4>📋 Roadmap de développement</h4>
+  <ul>
+    <li>Implémentation d'un cache de "souvenirs" pondérés</li>
+    <li>Génération d'illustrations contextuelles automatiques</li>
+    <li>Export vers format HTML interactif</li>
+    <li>Interface graphique utilisateur intuitive</li>
+  </ul>
+</div>
+
+<div class="project-section">
+  <h3>📐 Reconstruction 3D Basée Images</h3>
+  <p><strong>Technologies :</strong> Python, OpenCV, algorithmes de vision par ordinateur<br />
+  <strong>Contexte :</strong> Projet M1 - Application médicale</p>
+
+  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
+    <span style="color: #666;">🖼️ Pipeline : De l'image 2D au modèle 3D</span>
+  </div>
+
+  <h4>🎯 Objectif médical</h4>
+  <p>Projet exploratoire visant à reconstruire un modèle 3D anatomique à partir de vues multiples pour assister la détection de position patient en chirurgie percutanée.</p>
+
+  <h4>🔬 Méthodologie technique</h4>
+  <ol>
+    <li><strong>Prétraitement :</strong> Filtrage et normalisation des images d'entrée</li>
+    <li><strong>Détection de caractéristiques :</strong> Points clés et correspondances inter-images</li>
+    <li><strong>Triangulation :</strong> Reconstruction 3D par intersection de rayons</li>
+    <li><strong>Fusion :</strong> Assemblage du nuage de points en maillage cohérent</li>
+    <li><strong>Validation :</strong> Estimation des erreurs de reprojection</li>
+  </ol>
+
+  <h4>⚡ Défis rencontrés</h4>
+  <ul>
+    <li><strong>Calibration caméra :</strong> Précision des paramètres intrinsèques et extrinsèques</li>
+    <li><strong>Correspondances robustes :</strong> Gestion des occultations et variations d'éclairage</li>
+    <li><strong>Optimisation :</strong> Équilibre entre précision et temps de calcul</li>
+    <li><strong>Validation médicale :</strong> Respect des contraintes de précision clinique</li>
+  </ul>
+
+  <h4>🔬 Résultats obtenus</h4>
+  <ul>
+    <li>Pipeline fonctionnel de reconstruction multi-vues</li>
+    <li>Précision suffisante pour applications d'aide au positionnement</li>
+    <li>Documentation complète du processus et des limitations</li>
+  </ul>
+
+  <h4>🚀 Perspectives d'amélioration</h4>
+  <ul>
+    <li>Calibration avancée multi-caméras temps réel</li>
+    <li>Comparaison d'algorithmes alternatifs (SLAM, photogrammétrie)</li>
+    <li>Export vers environnements VR/AR (glTF, PLY)</li>
+    <li>Intégration avec systèmes de navigation chirurgicale</li>
+  </ul>
+</div>
+
+<div class="project-section">
+  <h3>🧲 Simulation Aimant Bitter - Couplage Thermo-Électrique</h3>
+  <p><strong>Technologies :</strong> Gmsh, ParaView, Python, solveurs numériques<br />
+  <strong>Contexte :</strong> Projet de simulation numérique avancée</p>
+
+  <div style="background: #f0f0f0; border: 2px dashed #ccc; height: 200px; display: flex; align-items: center; justify-content: center; margin: 1rem 0; border-radius: 6px;">
+    <span style="color: #666;">🖼️ Visualisation : Champs thermique et électrique</span>
+  </div>
+
+  <h4>🎯 Problématique scientifique</h4>
+  <p>Étude de la répartition thermique et des flux de courant dans une structure d'aimant supraconducteur de type Bitter, caractérisée par des géométries complexes et des couplages physiques multiples.</p>
+
+  <h4>🛠️ Chaîne d'outils complète</h4>
+  <table>
+    <tr>
+      <th>Étape</th>
+      <th>Outil</th>
+      <th>Fonction</th>
+    </tr>
+    <tr>
+      <td><strong>Géométrie</strong></td>
+      <td>Gmsh</td>
+      <td>Modélisation CAD et maillage adaptatif</td>
+    </tr>
+    <tr>
+      <td><strong>Calcul</strong></td>
+      <td>Solveur FEM custom</td>
+      <td>Résolution couplée thermo-électrique</td>
+    </tr>
+    <tr>
+      <td><strong>Visualisation</strong></td>
+      <td>ParaView</td>
+      <td>Rendu scientifique des champs</td>
+    </tr>
+    <tr>
+      <td><strong>Post-traitement</strong></td>
+      <td>Python/NumPy</td>
+      <td>Analyse statistique et métriques</td>
+    </tr>
+  </table>
+
+  <h4>🔄 Workflow de simulation</h4>
+  <ol>
+    <li><strong>Géométrie paramétrée :</strong> Modèle CAD flexible avec paramètres d'entrée</li>
+    <li><strong>Maillage adaptatif :</strong> Raffinement local dans les zones critiques</li>
+    <li><strong>Résolution itérative :</strong> Couplage des équations de diffusion thermique et électrique</li>
+    <li><strong>Convergence :</strong> Critères de stabilité et validation numérique</li>
+    <li><strong>Export multi-format :</strong> VTK, HDF5 pour visualisation et archivage</li>
+  </ol>
+
+  <h4>📊 Résultats et métriques</h4>
+  <ul>
+    <li><strong>Cartes thermiques :</strong> Distribution spatiale des températures</li>
+    <li><strong>Flux électriques :</strong> Densité de courant et résistivité locale</li>
+    <li><strong>Points critiques :</strong> Identification des zones de concentration thermique</li>
+    <li><strong>Validation :</strong> Comparaison avec données expérimentales disponibles</li>
+  </ul>
+
+  <h4>🔬 Pistes de recherche avancées</h4>
+  <ul>
+    <li>Couplage thermo-mécanique pour déformation structurelle</li>
+    <li>Automatisation de métriques (ΔT max, gradients critiques)</li>
+    <li>Optimisation multi-résolution pour calculs haute performance</li>
+    <li>Intégration dans pipeline de conception d'aimants</li>
+  </ul>
+</div>
+
+<div style="background: #e8f4f8; border-left: 4px solid #0366d6; padding: 1.5rem; margin-top: 2rem;">
+  <h3 style="margin-top: 0; color: #0366d6;">💡 Philosophy des projets</h3>
+  <p style="margin-bottom: 0;">
+    Chaque projet reflète une approche méthodique combinant <strong>rigueur technique</strong>, 
+    <strong>innovation créative</strong> et <strong>applications concrètes</strong>. 
+    L'objectif est toujours de créer des outils robustes, documentés et réutilisables, 
+    pouvant servir de base à des développements futurs plus ambitieux.
+  </p>
+</div>
+
+  </main>
+</div>
+
+<style>
+  .page-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .page-header {
+    position: sticky;
+    top: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .page-title {
+    margin: 0 0 1rem 0;
+    color: #24292e;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .page-description {
+    margin: 0;
+    color: #586069;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .page-content {
+    min-height: 100vh;
+  }
+  
+  .page-content h2 {
+    color: #24292e;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .page-content h3 {
+    color: #24292e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .page-content h4 {
+    color: #0366d6;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+  
+  .page-content table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .page-content th,
+  .page-content td {
+    border: 1px solid #e1e4e8;
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .page-content th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+    color: #24292e;
+  }
+  
+  .page-content .experience-section,
+  .page-content .project-section {
+    margin: 2.5rem 0;
+    padding: 2.5rem;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .page-content .experience-section:hover,
+  .page-content .project-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+  
+  .page-content .experience-section h3,
+  .page-content .project-section h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #0366d6;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .page-content ul {
+    line-height: 1.7;
+  }
+  
+  .page-content ol {
+    line-height: 1.7;
+  }
+  
+  .page-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .page-content pre {
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .page-content code {
+    background: #f6f8fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+  
+  .page-content pre code {
+    background: none;
+    padding: 0;
+  }
+  
+  /* Layout responsive */
+  @media (max-width: 1024px) {
+    .page-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .page-header {
+      position: static;
+      margin-bottom: 1rem;
+    }
+    
+    .page-content .experience-section,
+    .page-content .project-section {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-container {
+      gap: 1.5rem;
+    }
+    
+    .page-header {
+      padding: 1.5rem;
+    }
+    
+    .page-content .experience-section,
+    .page-content .project-section {
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .page-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+    </div>
+
+    
+  </body>
+</html>
