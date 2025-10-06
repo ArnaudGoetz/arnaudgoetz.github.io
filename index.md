@@ -56,7 +56,17 @@ title: Accueil
     <div>
       <h2 style="margin: 0 0 1.5rem 0; color: #24292e; font-size: 2rem; font-weight: 700;">À propos de moi</h2>
       <div style="color:#6a737d; font-style:italic; font-size:1rem; background:#f8f9fa; border:1px dashed #d0d7de; padding:1rem 1.25rem; border-radius:8px;">
-        (Contenu en préparation – vous ajouterez votre présentation ici.)
+        <p style="margin: 0 0 1rem 0;">
+          J'aime résoudre des problèmes, que ce soit en optimisant un algorithme, en construisant un modèle 3D (ou en trouvant la meilleure ligne sur une piste de ski). Chaque défi est une opportunité d'apprendre.
+        </p>
+        <p style="margin: 0 0 1rem 0;">
+          Le travail en équipe est essentiel pour moi, c'est une valeur que je cultive autant sur un terrain de rugby 
+          que dans mes projets techniques. Ma curiosité me pousse à explorer sans cesse des nouvelles technologies.
+        </p>
+        <p style="margin: 0;">
+          Je pense que ce qui me caractérise est le fait de rester positif face aux obstacles, de m'adapter rapidement aux situations. L'informatique et la simulation me passionnent parce qu'elles 
+          combinent créativité et rigueur.
+        </p>
       </div>
     </div>
     
