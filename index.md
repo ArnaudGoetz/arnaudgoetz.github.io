@@ -57,15 +57,13 @@ title: Accueil
       <h2 style="margin: 0 0 1.5rem 0; color: #24292e; font-size: 2rem; font-weight: 700;">À propos de moi</h2>
       <div style="color:#6a737d; font-style:italic; font-size:1rem; background:#f8f9fa; border:1px dashed #d0d7de; padding:1rem 1.25rem; border-radius:8px;">
         <p style="margin: 0 0 1rem 0;">
-          J'aime résoudre des problèmes, que ce soit en optimisant un algorithme, en construisant un modèle 3D (ou en trouvant la meilleure ligne sur une piste de ski). Chaque défi est une opportunité d'apprendre.
+               J’aime donner vie à des idées grâce au code et à la 3D. Ce qui me motive, c’est de <strong>comprendre un problème complexe</strong> et de le transformer en une <strong>solution claire et efficace</strong> — qu’il s’agisse d’un algorithme optimisé, d’une scène 3D fidèle ou d’une interaction fluide.
         </p>
         <p style="margin: 0 0 1rem 0;">
-          Le travail en équipe est essentiel pour moi, c'est une valeur que je cultive autant sur un terrain de rugby 
-          que dans mes projets techniques. Ma curiosité me pousse à explorer sans cesse des nouvelles technologies.
+                Le <strong>travail en équipe</strong> compte beaucoup pour moi : j’apprends en partageant, en confrontant les approches et en construisant ensemble des projets concrets. Mon parcours en informatique et visualisation 3D m’a rendu curieux, adaptable et persévérant face aux défis techniques.
         </p>
         <p style="margin: 0;">
-          Je pense que ce qui me caractérise est le fait de rester positif face aux obstacles, de m'adapter rapidement aux situations. L'informatique et la simulation me passionnent parce qu'elles 
-          combinent créativité et rigueur.
+            Je cherche un environnement où <strong>la technologie sert la créativité</strong> — un lieu où je peux continuer à progresser tout en apportant une véritable valeur aux projets.
         </p>
       </div>
     </div>
