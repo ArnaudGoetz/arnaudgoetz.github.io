@@ -7,7 +7,7 @@
     <title>Projets | Portfolio – Arnaud Goetz</title>
     <meta name="description" content="Réalisations techniques en génération procédurale, simulation, rendu 3D et IA appliquée">
     
-    <link rel="stylesheet" href="/assets/css/style.css?v=7e9b8c89b6cda01a84f9b6b8e30353441d5d08db">
+    <link rel="stylesheet" href="/assets/css/style.css?v=f87a7bb1f22fb29d494cf6afb0062a2633cf5fbf">
     <style>
       /* ===================== */
       /*  Top Bar (Modern)     */
@@ -301,6 +301,61 @@
     <span class="tech-tag">HPC</span>
     <span class="tech-tag">SLURM</span>
     <span class="tech-tag">Calcul Scientifique</span>
+  </p>
+</div>
+
+<div class="project-section">
+  <h3>Détection de Fissures par l'Algorithme du Germe</h3>
+  <p><em>Projet : Fondements et Algorithmes de l'Imagerie Numérique</em></p>
+  
+  <h4>Contexte et Objectifs</h4>
+  <p>
+    Implémentation d'une variante de l'algorithme du germe pour détecter automatiquement des fissures 
+    dans des images en niveaux de gris. Le projet développe une méthode robuste d'identification et de 
+    cartographie des fissures sur diverses surfaces.
+  </p>
+  
+  <div class="image-gallery" style="display: flex; gap: 20px; margin: 20px 0; align-items: center;">
+    <div style="flex: 1;">
+      <img src="/assets/projects/detection-fissures/src.png" alt="Image source avec fissures" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
+      <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+        Image source contenant les fissures à détecter
+      </p>
+    </div>
+    <div style="flex: 1;">
+      <img src="/assets/projects/detection-fissures/res.png" alt="Carte de détection des fissures" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
+      <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+        Carte de détection : pixels blancs = fissures détectées
+      </p>
+    </div>
+  </div>
+  
+  <h4>Méthodes Implémentées</h4>
+  <ul>
+    <li><strong>Seuillage adaptatif</strong> : Seuil dynamique s'ajustant selon la propagation et la circularité</li>
+    <li><strong>Propagation par couches</strong> : Expansion isotrope évitant les biais directionnels</li>
+    <li><strong>Critère de circularité</strong> : Filtrage géométrique (2R/D) pour distinguer fissures et régions compactes</li>
+    <li><strong>Germes multiples</strong> : Détection automatisée de plusieurs fissures disjointes</li>
+    <li><strong>Analyse topologique</strong> : Construction du graphe des composantes quasi-connexes</li>
+  </ul>
+  
+  <h4>Pipeline de Traitement</h4>
+  <ol>
+    <li><strong>Initialisation</strong> : Sélection des germes et calcul de seuil automatique</li>
+    <li><strong>Propagation</strong> : Extension aux 8-voisins avec contraintes de taille</li>
+    <li><strong>Validation</strong> : Filtrage basé sur la circularité et rejet des fausses détections</li>
+    <li><strong>Fusion</strong> : Agrégation des résultats et génération de la carte finale</li>
+  </ol>
+  
+  <h4>Technologies</h4>
+  <p>
+    <span class="tech-tag">C</span>
+    <span class="tech-tag">Traitement d'Images</span>
+    <span class="tech-tag">Algorithmes de Croissance</span>
+    <span class="tech-tag">Géométrie Discrète</span>
+    <span class="tech-tag">Analyse Topologique</span>
+    <span class="tech-tag">Seuillage Adaptatif</span>
+    <span class="tech-tag">Vision par Ordinateur</span>
   </p>
 </div>
 
