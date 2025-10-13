@@ -7,7 +7,7 @@
     <title>Projets | Portfolio – Arnaud Goetz</title>
     <meta name="description" content="Réalisations techniques en génération procédurale, simulation, rendu 3D et IA appliquée">
     
-    <link rel="stylesheet" href="/assets/css/style.css?v=f87a7bb1f22fb29d494cf6afb0062a2633cf5fbf">
+    <link rel="stylesheet" href="/assets/css/style.css?v=af45cc86909d7c32d2a885ac8df0c14b07831a93">
     <style>
       /* ===================== */
       /*  Top Bar (Modern)     */
@@ -356,6 +356,66 @@
     <span class="tech-tag">Analyse Topologique</span>
     <span class="tech-tag">Seuillage Adaptatif</span>
     <span class="tech-tag">Vision par Ordinateur</span>
+  </p>
+</div>
+
+<div class="project-section">
+  <h3>Lidar Cave Explorer VR</h3>
+  <p><em>Projet : Interaction 3D et Réalité Virtuelle - Meta Quest 3</em></p>
+  
+  <h4>Concept et Immersion</h4>
+  <p>
+    Exploration de caverne en réalité virtuelle dans l'obscurité totale, inspirée de Scanner Sombre. 
+    L'environnement se révèle progressivement grâce à un système XR emitter générant des points LiDAR colorés, 
+    créant une expérience d'immersion totale où chaque mouvement devient une découverte.
+  </p>
+  
+  <div class="image-gallery" style="display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 300px;">
+      <img src="/assets/projects/lidar-cave-vr/uiVR.png" alt="Interface utilisateur VR avec contrôles" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
+      <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+        Interface VR : paramètres et contrôles immersifs
+      </p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="/assets/projects/lidar-cave-vr/caveVR.png" alt="Exploration de caverne avec scanner LiDAR" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
+      <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+        Vue LiDAR : points colorés révélant progressivement l'environnement
+      </p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <img src="/assets/projects/lidar-cave-vr/Cave2VR.png" alt="Caverne complexe avec gradient de distance" style="width: 100%; border: 1px solid #ddd; border-radius: 4px;" />
+      <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+        Gradient de couleur basé sur la distance pour la perspective 3D
+      </p>
+    </div>
+  </div>
+  
+  <h4>Système XR Emitter et Contrôles</h4>
+  <ul>
+    <li><strong>XR Emitter LiDAR</strong> : Génération temps réel de points colorés avec gradient de distance</li>
+    <li><strong>Contrôleurs Meta Quest 3</strong> : Navigation intuitive (joysticks), téléportation (triggers), actions physiques (saut/accroupissement)</li>
+    <li><strong>Manipulation directe</strong> : Interaction naturelle avec le scanner et l'interface 3D immersive</li>
+    <li><strong>Optimisation GPU</strong> : Instancing des milliers de points LiDAR avec culling angulaire</li>
+  </ul>
+  
+  <h4>Immersion et Gameplay</h4>
+  <p>
+    L'obscurité totale et la révélation progressive par points LiDAR transforment l'exploration en expérience 
+    sensorielle unique. Deux niveaux de difficulté s'adaptent aux capacités VR : parcours simple ou complexe 
+    avec obstacles nécessitant maîtrise physique complète (saut, accroupissement, collisions réalistes).
+  </p>
+  
+  <h4>Technologies</h4>
+  <p>
+    <span class="tech-tag">Unity 3D</span>
+    <span class="tech-tag">Meta Quest 3</span>
+    <span class="tech-tag">Réalité Virtuelle</span>
+    <span class="tech-tag">XR Interaction Toolkit</span>
+    <span class="tech-tag">GPU Instancing</span>
+    <span class="tech-tag">Système LiDAR</span>
+    <span class="tech-tag">Optimisation VR</span>
+    <span class="tech-tag">C#</span>
   </p>
 </div>
 

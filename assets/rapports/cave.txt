@@ -1,0 +1,70 @@
+Lidar cave explorer
+Mariotti Damien , Arnaud Goetz
+Concept
+Pour explorer une
+caverne sombre vous
+avez un scanner,
+Pour la perspective
+les points changent
+de couleur (gradient)
+en fonction de la
+distance
+Interactions
+Interactions click
+avec l’UI de
+paramètres
+Interaction grab
+sur la boulle
+dans la zone
+d'apparation
+Mouvement
+Déplacement libre
+avec le joystick droit
+Rotation avec le
+joystick gauche
+Téléportation
+uniquement dans la
+zone de début avec
+les triggers
+Sauts
+Avec la touche
+secondaire du
+contrôleur gauche
+Accroupissements
+Avec la touche
+principale du
+contrôleur gauche
+Hit-box
+Ne peut pas passé
+a travers les murs
+/ sol
+Affecter par la
+gravitée
+Ne peut pas passé
+la tête a travers
+les obstacles
+(headset vr)
+Optimisation
+Disparition
+après un temps
+• 2 minutes
+Angle de
+Culling
+• Ne pas draw
+les points non
+visibles
+GPU Instancing
+• Instancier les
+points sur le
+GPU
+Paramètres
+Musique ou non
+2 difficultés
+Facile : Caverne courte
+sans saut ni
+accroupissements
+nécessaires
+Difficile (pour les adeptes
+de VR) : Long avec saut
+et accroupissements
+ainsi que des chutes

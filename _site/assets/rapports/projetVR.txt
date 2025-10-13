@@ -1,0 +1,38 @@
+
+Casque de Réalité virtuelle Meta Quest 3
+Réalisation finale
+
+Objectif
+
+A l'aide des connaissances acquises dans les cours de I3D et des TPs précédents, vous devez réaliser une application originale, complète, immersive et interactive sur un thème et un environnement de votre choix (à construire).
+
+Cette application se déroulera sur casque Meta Quest 3 dans un ou plusieurs environnements 3D. Elle demandera d'accomplir au sein de l'environnement une tâche décomposable en plusieurs étapes, qui seront réalisées à l'aide de techniques d'interaction en réalité virtuelle. Vous devrez employer au moins deux des trois grandes catégories de l'interaction en réalité virtuelle, à savoir :
+
+    Sélection/manipulation d'objets : La sélection permet de désigner les objets (proches ou distants) avec lesquels on va interagir et couvre des techniques comme le rayon virtuel, le Gogo, ou la visée par le regard. La manipulation inclut le changement de position, orientation, échelle, couleur, texture, éclairage, etc.
+    Navigation : Toutes les approches possibles donnant à l'utilisateur un contrôle sur le déplacement de la caméra virtuelle dans le monde 3D pour lui permettre de changer de point de vue. Cela inclut la téléportation vers des positions ciblées ou prédéterminées, voler comme un avion, glisser sur le sol, tourner comme une voiture, et toute autre mode imaginable
+    Contrôle d'application : La gestion des menus, des affichages de score ou de statut, d'écran de paramétrage ou d'accueil. Il est nécessaire que ces éléments soient interactifs pour compter. Les menus peuvent être permanents ou invoqués, positionnés dans le décor ou par rapport au corps de l'utilisateur.
+
+L'utilisateur de votre application aura un scénario à accomplir dans l'environnement virtuel, dépendant du type d'application choisi, et réalisable en plusieurs étapes. A titre d'exemples (projets réalisés les années précédentes) : traverser un labyrinthe sans être tué par des monstres qui vous poursuivent et que vous pouvez combattre (tirer dessus), s'échapper d'une prison constituée de plusieurs pièces en résolvant des énigmes, bombarder un nombre donné de cibles au sol depuis un avion dans un temps limité, faire pousser un jardin virtuel et récolter les plantes une fois arrosées et arrivées à maturation, réaliser des elixirs alchimiques dans un laboratoire en suivant les recettes d'un grimoire, conduire un hélicoptère en vue à la première personne et utiliser son treuil pour déplacer une charge lourde jusqu'à une zone cible, jouer à un jeu de plateau (type échecs ou abalone) en sélectionnant et déplacant les pièces et en proposant des angles de caméras multiples pour faciliter la vision de la partie.
+
+Réalisation et Critères d'appréciation
+
+Vous pouvez librement reprendre, modifier et vous servir des éléments développés dans les TPs vus ensemble ainsi que proposer et développer de nouveaux types et outils d'interaction. Le travail minimum pour la moyenne consiste à réutiliser correctement les techniques vues en séance de TP (sélection d'objets par le rayon, drag and drop d'objets pour la manipulation et téléportation par le rayon pour la navigation) pour réaliser une application avec un scénario complet à accomplir en quelques étapes et dans environnement 3D construit.
+
+D'autres techniques (de la littérature ou que vous imaginez) peuvent également être développées pour répondre aux besoins spécifiques de votre application. Seront appréciés pour les techniques utilisées :
+
+    La réalisation de ces techniques (pas de bug)
+    Leur ergonomie : Demande-t-elle de la précision et/ou est-on aidé pour accomplir la tâche ? La précision demandée est-elle excessive ?
+    Leur intégration : Le placement des éléments graphiques est-il pertinent ? Optimum ? La vitesse de rotation est-elle mal réglée ? etc.
+    Leur originalité
+    La difficulté à être codée (les techniques impliquant des rotations dans l'espace sont plus difficiles à réaliser)
+
+Concernant l'application elle-même, les critères évalués seront :
+
+    Compréhension : est-on suffisamment guidé pour comprendre ce qui doit être réalisé dans l'univers virtuel et la manière dont on peut accomplir les étapes conduisant à l'objectif ?
+    Personnalisation : L'application propose-t-elle une expérience unique ou permet-elle des réglages pour s'adapter à des choix utilsateurs (exemples : vitesses réglables selons sa préférence, nombre de vies ajustables, etc.). 
+
+
+Livrable
+
+Lors de la dernière séance (lundi 26 mai) vous ferez une présentation de votre application avec une démonstration fonctionnelle dans le casque Meta Quest 3. Quelques questions vous seront posées sur la manière dont vous avez choisi et implémenté les fonctionnalités, réfléchi aux choix de design et les difficultés que vous avez pu rencontrer. Vous déposerez lors de cette séance vos scripts d'interaction (et uniquement les scripts) sur une page moodle dédiée.
+
